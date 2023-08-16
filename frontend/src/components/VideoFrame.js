@@ -1,6 +1,6 @@
 import React from 'react'
 
-function VideoFrame() {
+function VideoFrame({url_video}) {
 
     return (
         <>
@@ -10,7 +10,7 @@ function VideoFrame() {
                     width="100%"
                     height="450"
                     className='rounded-xl'
-                    src='asas'
+                    src= {url_video}
                     title="Youtube Player"
                     allowFullScreen
                 />
