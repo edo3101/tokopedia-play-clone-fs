@@ -15,7 +15,7 @@ function VideoPage() {
 
     const getVideoURL = baseURL + "video/" + params.id;
     const getProductsURL = baseURL + "video/" + params.id + "/products";
-    const commentURL = baseURL + "videos/" + "64c2423294bb0cdf8dd6efba"+ "/comments";
+    const commentURL = baseURL + "videos/" + params.id+ "/comments";
 
     const [video, setVideo] = useState({});
     const [products, setProducts] = useState([]);
