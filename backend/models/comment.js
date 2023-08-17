@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const videoSchema = new mongoose.Schema({
+const commentSchema = new mongoose.Schema({
     username: { type: String, required: true, maxLength: 100 },
     comment: { type: String, required: true, maxLength: 100 },
     video_id: {
@@ -10,4 +10,4 @@ const videoSchema = new mongoose.Schema({
     },
 });
 
-module.exports = mongoose.model('products', prodcutSchema);
+module.exports = mongoose.model('comments', commentSchema);

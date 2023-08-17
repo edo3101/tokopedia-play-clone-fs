@@ -7,6 +7,7 @@ async function findAll(req, res) {
         const comments = await commentService.getAllCommentService()
 
         res.status(200).json(comments);
+        console.log(comments)
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -64,7 +65,7 @@ async function create(req, res) {
             comment: comment,
             video_id: video_id
         }
-
+        console.log(commentCreate)
         await commentService.create(commentCreate);
         res.status(201).json({ "status": "success" });
     } catch (error) {

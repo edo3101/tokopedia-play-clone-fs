@@ -1,6 +1,6 @@
 import React from 'react'
 
-function VideoCard({_id, url_thumbnail}) {
+function VideoCard({_id, url_thumbnail, title}) {
 
     return (
         <>
@@ -10,7 +10,7 @@ function VideoCard({_id, url_thumbnail}) {
                         style={{ backgroundImage: `url(${url_thumbnail})`, backgroundSize: 'cover' }}>
                         <div className='flex h-1/2 justify-end flex-col bg-gradient-to-t from-black to-transparent p-3'>
                             <h2 className="text-white text-lg ">
-                                judul</h2>
+                                {title}</h2>
                         </div>
 
                     </div>

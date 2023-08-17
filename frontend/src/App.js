@@ -6,8 +6,8 @@ import VideoPage from './pages/VideoPage';
 function App() {
   return (
     <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/videos/:id' element={<VideoPage/>}/>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/video/:id" element={<VideoPage/>}/>
     </Routes>
   )
 }

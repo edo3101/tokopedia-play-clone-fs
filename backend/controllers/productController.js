@@ -39,7 +39,6 @@ async function findByVideoId(req, res) {
         }
 
         const products = await productService.getProductByVideoIdService(video_id);
-S
         res.status(200).json(products);
 
     } catch (error) {

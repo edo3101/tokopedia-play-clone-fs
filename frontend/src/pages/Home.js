@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import VideoCard from "../components/VideoCard";
+import { baseURL } from "../config";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 function Home(){
-    // const baseURL = process.REACT_APP_BASE_URL;
-    // const videoURL = baseURL+"videos";
+    const videoURL = baseURL+"videos";
 
     const [videos, setVideos] = useState([]);
 
@@ -15,7 +15,7 @@ function Home(){
             <>
                 {
                     videos.map((video) => (
-                        <VideoCard key={video._id} _id={video._id} url_thumbnail={video.url_thumbnail} />
+                        <VideoCard key={video._id} _id={video._id} url_thumbnail={video.url_thumbnail} title={video.title} />
                     ))
                 }
             </ >
@@ -23,7 +23,7 @@ function Home(){
     }
 
     useEffect(() => {
-        axios.get('http://localhost:4000/videos').then((response) => {
+        axios.get(videoURL).then((response) => {
             setVideos(response.data);
         });
 

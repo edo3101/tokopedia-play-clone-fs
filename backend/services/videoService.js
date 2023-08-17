@@ -4,8 +4,8 @@ async function getAllVideoService() {
   return videoRepo.getAllVideo()
 }
 
-async function getVideoByIdService(videoID) {
-    return videoRepo.getVideobyID(videoID)
+async function getVideoByIdService(id) {
+    return videoRepo.getVideobyID(id)
   }  
 
 module.exports = {

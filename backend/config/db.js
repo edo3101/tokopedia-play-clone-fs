@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
-const dbURI = 'mongodb://0.0.0.0:27017/tokopedia_play'; // Replace with your MongoDB URI
+const { DB_URI } = require('./env');
+// const dbURI = 'mongodb://0.0.0.0:27017/tokopedia_play'; // Replace with your MongoDB URI
 
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(DB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const db = mongoose.connection;
 

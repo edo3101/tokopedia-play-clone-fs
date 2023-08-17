@@ -1,4 +1,5 @@
 const videoService = require('../services/videoService.js');
+const mongoose = require('mongoose');
 
 async function getAllVideo(req, res) {
   try {
@@ -12,11 +13,11 @@ async function getAllVideo(req, res) {
 
 async function getVideoById(req, res) {
     try {
-        const videoID = req.params
-        const video = await videoService.getVideoByIdService(videoID)
-        if(video.length === 0) {
+        const {id} = req.params
+        const video = await videoService.getVideoByIdService(id)
+        if(!mongoose.Types.ObjectId.isValid(id)) {
             return res.status(404).json({
-                message: "Video not found!",
+                message: `${id} is not a ObjectId format in Mongo`,
             });
         }
         res.status(200).json(video);

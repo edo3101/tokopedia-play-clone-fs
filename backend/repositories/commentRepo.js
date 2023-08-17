@@ -1,19 +1,19 @@
-const comment = require('../models/comment.js');
+const comments = require('../models/comment.js');
 
 async function getAllComment() {
-    const getAllComment = await comment.find()
+    const getAllComment = await comments.find()
 
     return getAllComment
 }
 
 async function getCommentById(id) {
-    const getcommentbyid = await comment.findById(id).exec()
+    const getcommentbyid = await comments.findById(id).exec()
 
     return getcommentbyid
 }
 
 async function getCommentByVideoId(video_id) {
-    const getcommentbyvideoid = await comment.find({video_id: video_id}).exec()
+    const getcommentbyvideoid = await comments.find({video_id: video_id}).exec()
 
     if (getcommentbyvideoid === null) {
         throw new Error(`comment with id : ${video_id} not found`);
@@ -23,9 +23,9 @@ async function getCommentByVideoId(video_id) {
 }
 
 async function create(comment) {
-    const comments = await comment.create(comment);
+    const commentCreate = await comments.create(comment);
 
-    return comments
+    return commentCreate
 }
 
 

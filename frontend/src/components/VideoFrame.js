@@ -1,13 +1,13 @@
 import React from 'react'
 
-function VideoFrame({url_video}) {
+function VideoFrame({url_video, title}) {
 
     return (
         <>
-            <div className='flex flex-col  h-[400px] w-[900px] items-center bg-slate-900'>
-                <h2 className='self-start text-white text-xl mb-2'>title</h2>
+            <div className=' flex flex-col h-[450px] items-center'>
+                <h2 className='self-start text-white text-xl mb-2'>{title}</h2>
                 <iframe
-                    width="100%"
+                    width="800"
                     height="450"
                     className='rounded-xl'
                     src= {url_video}

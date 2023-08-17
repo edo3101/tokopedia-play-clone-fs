@@ -12,7 +12,7 @@ async function getCommentByVideoIdService(video_id) {
   return commentRepo.getCommentByVideoId(video_id)
 }  
 
-async function CreateCommentService(comment) {
+async function create(comment) {
     return commentRepo.create(comment)
   }  
 
@@ -20,5 +20,5 @@ module.exports = {
   getAllCommentService,
   getCommentByIdService,
   getCommentByVideoIdService,
-  CreateCommentService
+  create
 }

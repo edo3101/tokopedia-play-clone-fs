@@ -6,8 +6,8 @@ async function getAllVideo() {
     return getallvideos
 }
 
-async function getVideobyID(videoID) {
-    const videoById = await videosfind(videoID)
+async function getVideobyID(id) {
+    const videoById = await videos.findById(id)
 
     return videoById
 }
